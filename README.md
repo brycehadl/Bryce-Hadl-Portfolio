@@ -21,7 +21,8 @@ The portfolio site can be found here: https://playful-madeleine-59a17b.netlify.a
 
 
 
-![Screenshot of the home screen]()
+![Screenshot of the home screen]()<img width="1512" alt="Screenshot 2023-11-12 at 4 36 46 PM" src="https://github.com/brycehadl/netlify-test/assets/133932050/d7092f76-7d98-45e0-98ef-86ee6a8d4d6d">
+
 
 
 
