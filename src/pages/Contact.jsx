@@ -1,109 +1,73 @@
-import { useState } from "react";
+import axios from 'axios';
+import React, { useState } from 'react'
 
-function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [submitMessage, setSubmitMessage] = useState("");
+const Contact = () => {
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-    if (name === "name") {
-      setName(value);
-    } else if (name === "email") {
-      setEmail(value);
-    } else if (name === "message") {
-      setMessage(value);
-    }
-  };
-
-  const handleFormSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const emailRegex = /\S+@\S+\.\S+/;
-    const isEmailValid = emailRegex.test(email);
+    // Your EmailJS service ID, template ID, and Public Key
+    const serviceId = 'service_ktdokbj';
+    const templateId = 'template_b1reswo';
+    const publicKey = 'LaIN5rz9G5S094rcH';
 
-    if (!name) {
-      setSubmitMessage("Please enter your name.");
-      return;
+    // Create an object with EmailJS service ID, template ID, Public Key, and Template params
+    const data = {
+      service_id: serviceId,
+      template_id: templateId,
+      user_id: publicKey,
+      template_params: {
+        from_name: name,
+        from_email: email,
+        to_name: 'Bryce_Hadl',
+        message: message,
+      }
+    };
+
+    // Send the email using EmailJS
+    try {
+      const res = await axios.post("https://api.emailjs.com/api/v1.0/email/send", data);
+      console.log(res.data);
+      setName('');
+      setEmail('');
+      setMessage('');
+    } catch (error) {
+      console.error(error);
     }
-
-    if (!email) {
-      setSubmitMessage("Please enter your email.");
-      return;
-    }
-
-    if (!isEmailValid) {
-      setSubmitMessage("Please enter a valid email address.");
-      return;
-    }
-
-    if (!message) {
-      setSubmitMessage("Please enter a message.");
-      return;
-    }
-
-    setName("");
-    setEmail("");
-    setMessage("");
-
-    setSubmitMessage(
-      "Form functionality is not implemented at this time. To reach me, please email me at brycehadl11@gmail.com"
-    );
-  };
+  }
 
   return (
-    <div className="container mt-3">
-      <h1 className="text-center">Contact</h1>
-      <form className="form" onSubmit={handleFormSubmit} noValidate>
-        <div className="mb-3">
-          <label htmlFor="name" className="form-label">
-            Name
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            name="name"
-            value={name}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">
-            Email
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            name="email"
-            value={email}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="message" className="form-label">
-            Message
-          </label>
-          <textarea
-            className="form-control"
-            name="message"
-            rows="5"
-            value={message}
-            onChange={handleInputChange}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-        {submitMessage && (
-          <div className="alert alert-primary mt-3" role="alert">
-            {submitMessage}
-          </div>
-        )}
+    <div>
+      <form onSubmit={handleSubmit} className='emailForm' netlify>
+        <input
+          type="text"
+          placeholder="Your Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          type="email"
+          placeholder="name@example.com"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <textarea
+       type="text"
+       placeholder="Enter Message Here"
+          cols="20"
+          rows="10"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        >
+        </textarea>
+        <button type="submit">Send Email</button>
       </form>
     </div>
-  );
+  )
 }
 
 export default Contact;

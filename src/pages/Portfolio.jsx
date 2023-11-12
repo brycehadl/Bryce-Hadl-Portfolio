@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 
 function Portfolio() {
-//   const currentPage = useLocation().pathname;
   return (
     <header id="navbar">
       <div className="nav-div">
@@ -16,7 +15,7 @@ function Portfolio() {
             <Link to="/projects" > Projects</Link>
           </li>
           <li>
-            <Link to="/contact" >Contact Me</Link>
+            <Link to="/contact" >Contact </Link>
           </li>
           <li>
             <Link rel="noreferrer" target="_blank" to={myResume}>
