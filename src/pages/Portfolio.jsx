@@ -1,4 +1,3 @@
-import myResume from "../assets/Resume.png";
 import { Link } from "react-router-dom";
 
 
@@ -18,7 +17,7 @@ function Portfolio() {
             <Link to="/contact" >Contact </Link>
           </li>
           <li>
-            <Link rel="noreferrer" target="_blank" to={myResume}>
+            <Link rel="noreferrer" target="_blank" to={'https://docs.google.com/document/d/1-DSiXApLVK-hMx6JUfwmHepj9EEpsV_Vp2lV9c5Q-zs/edit?usp=sharing'}>
               Resume
             </Link>
           </li>

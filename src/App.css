@@ -24,6 +24,7 @@
 }
 .nav-div {
   display: flex;
+  justify-content: space-between;
 }
 .nav-menu {
   margin-left: 15rem;
@@ -38,6 +39,8 @@
 #navbar a {
   text-decoration: none;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
   float: left;
   padding: 1rem 2rem;
@@ -68,8 +71,8 @@
   color: rgb(45, 217, 23);
   background-image: linear-gradient(to left, rgb(228, 37, 181) 0%, rgb(255, 194, 26) 100%);
   background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
+  /* -webkit-background-clip: text;
+  -moz-background-clip: text; */
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
@@ -90,18 +93,30 @@
 
 .column-2 {
   width: 50%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
 }
 
 .about-heading {
   font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-text {
   padding: 0 10rem;
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #BryceHadl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 60%;
   height: 60%;
   border-radius: 2rem;
@@ -130,6 +145,8 @@
 
 .projects-text {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 5rem;
   padding-bottom: 2rem;
   border-bottom: 2px solid black;
@@ -138,16 +155,21 @@
 
 .projects-h1 {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
 .projects-p {
   display: flex;
+  /* align-items: center; */
+  text-align: center;
   justify-content: center;
 }
 
 .projects-display {
   display: flex;
+  align-items: center;
+  justify-content: center;
   border: 5px solid rgb(0, 0, 0);
   padding: 2rem;
 }
@@ -332,21 +354,30 @@
   text-align: center;
 }
 
-input{
+/* input{
   margin: 10px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex-direction: row; 
-}
+  flex-direction: center; 
+} */
 
 textarea {
-  display: flex;
+  display: flex; 
   justify-content: center;
-  flex-direction: row;
-  font-size: 1.3rem;
+  text-align: center;
   position:relative; left:0px; top:143px;
+  flex: 0 0 auto ;
+  width: 25% ;
+  height: 150px;
+  padding: 12px 20px;
+  /* box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none; */
 }
 
 button{
