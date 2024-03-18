@@ -1,5 +1,7 @@
 # Portfolio
 
+Hi Al, I recently applied for a role at Samsara and I'm looking to grow my professional network can I add you as a connection? Hope to hear from you -Bryce
+
 ## Description
 
 Personal portfolio site.

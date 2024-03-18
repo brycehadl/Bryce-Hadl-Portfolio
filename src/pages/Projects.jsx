@@ -23,10 +23,19 @@ function Projects() {
                 <div>
                   <h1 className="project-title">{project.title}</h1>
                   <p className="project-description">{project.description}</p>
-                  <button>{project.website}</button>
+                  <button>Project Repo {project.link}</button>
                 </div>
+                  <Link
+                  to={project.website}
+                  key={project.image}
+                  className="projects-link"
+                  
+                  >
+                  <button>Live Demo {project.website}</button>
+                 </Link>
               </div>
             </Link>
+            
           ))}
         </div>
       </div>

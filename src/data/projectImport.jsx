@@ -11,7 +11,7 @@ export const project = [
         description: "In this project as a team we used API's to create a stats sharing website primarily for Baseball/Football Teams.",
         image: "src/assets/fetching-baseball.png",
         link: "https://github.com/brycehadl/Map-stats",
-        // website: "https://fetching-baseball.netlify.app/",
+        website: "https://fetching-baseball.netlify.app/",
     },
     {
         title: "Social-Network-API",
