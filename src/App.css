@@ -71,8 +71,8 @@
   color: rgb(45, 217, 23);
   background-image: linear-gradient(to left, rgb(228, 37, 181) 0%, rgb(255, 194, 26) 100%);
   background-size: 100%;
-  /* -webkit-background-clip: text;
-  -moz-background-clip: text; */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }

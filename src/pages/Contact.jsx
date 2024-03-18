@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
@@ -138,6 +139,7 @@ const StyledContactForm = styled.div`
 
     input {
       display: flex;
+      align-items: center;
       width: 100%;
       height: 35px;
       padding: 7px;
@@ -152,6 +154,8 @@ const StyledContactForm = styled.div`
 
     textarea {
       display: flex;
+      align-items: center;
+      top: 1px;
       max-width: 100%;
       min-width: 100%;
       width: 100%;
@@ -164,17 +168,25 @@ const StyledContactForm = styled.div`
 
       &:focus {
         border: 2px solid rgba(0, 206, 158, 1);
+        align-items: center;
       }
     }
 
     label {
       display: flex;
+      align-items: center;
       margin-top: 1rem;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     input[type="submit"] {
       display: flex;
-      margin-top: 10px;
+      // text-align: center;
+      width: 100px;
+      align-items: center;
+      // margin-left: auto;
+      // margin-right: auto;
       cursor: pointer;
       background: #04AA6D;
       color: white;
