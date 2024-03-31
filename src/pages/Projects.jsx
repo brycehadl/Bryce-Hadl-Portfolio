@@ -31,7 +31,7 @@ function Projects() {
                 </div>
                 <Link
                   to={project.website}
-                  key={project.image}
+                  key={project.website}
                   className="projects-link"
                 >
                   <button>Live Demo {project.website}</button>

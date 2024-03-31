@@ -25,7 +25,7 @@ export const project = [
         description: "Uses webpacks to function even when there is no internet connection.",
         image: "src/assets/text-editor.png",
         link: "https://github.com/brycehadl/text_editor",
-        // website: "https://fetching-baseball.netlify.app/",
+        website: "https://bryce-text-editor-122cc371db37.herokuapp.com/",
         
     }
 ];
