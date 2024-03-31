@@ -19,23 +19,25 @@ function Projects() {
               className="projects-link"
             >
               <div className="projects-info">
-                <img src={project.image} alt="project screenshot" className="projects-image"/>
+                <img
+                  src={project.image}
+                  alt="project screenshot"
+                  className="projects-image"
+                />
                 <div>
                   <h1 className="project-title">{project.title}</h1>
                   <p className="project-description">{project.description}</p>
                   <button>Project Repo {project.link}</button>
                 </div>
-                  <Link
+                <Link
                   to={project.website}
                   key={project.image}
                   className="projects-link"
-                  
-                  >
+                >
                   <button>Live Demo {project.website}</button>
-                 </Link>
+                </Link>
               </div>
             </Link>
-            
           ))}
         </div>
       </div>
