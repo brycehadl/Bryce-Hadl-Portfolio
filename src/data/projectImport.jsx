@@ -1,3 +1,4 @@
+import fetching from "../data/fetching-baseball.png";
 export const project = [
     {
         title: "Dungeonkit",
@@ -9,7 +10,7 @@ export const project = [
     {
         title: "Fetching-Baseball",
         description: "In this project as a team we used API's to create a stats sharing website primarily for Baseball/Football Teams.",
-        image: "./src/data/fetching-baseball.png",
+        image: fetching,
         link: "https://github.com/brycehadl/Map-stats",
         website: "https://fetching-baseball.netlify.app/",
     },
